@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es" class="light dark">
+
+<head>
+
+ <meta charset="UTF-8">
+ <title>Agregar producto - Market</title>
+
+ <script src="js/registraServiceWorker.js"></script>
+
+ <meta name="viewport" content="width=device-width">
+ <meta name="theme-color" content="#fffbfe">
+ <link rel="icon" sizes="32x32" href="favicon.ico">
+ <link rel="manifest" href="site.webmanifest">
+ <script src="ungap/custom-elements.js"></script>
+
+ <script type="module" src="js/configura.js"></script>
+ <link rel="stylesheet" href="css/estilos.css">
+ <link rel="stylesheet" href="css/transicion_completa.css">
+ <script type="module" src="lib/js/submitForm.js"></script>
+ <script type="module" src="lib/js/muestraError.js"></script>
+
+</head>
+
+
+
+<body>
+
+  
+  <md-top-app-bar>
+    <h1>Agregar producto</h1>
+  </md-top-app-bar>
+<nav-tab-fixed id="tab"></nav-tab-fixed>
+  <main>
+
+
+
+ <form onsubmit="submitForm('srv/producto-agrega.php', event)
+    .then(modelo => location.href = 'index.html')
+    .catch(muestraError)">
+
+  
+   <p>
+    <a href="index.html"><button class="md-outline-button">
+      Cancelar
+     </button></a>
+   </p>
+ 
+
+  <p>
+    <label class="md-filled-text-field">
+     <input required placeholder="Nombre*" name="nombre">
+     <span>Nombre *</span>
+     <small>Obligatorio</small>
+    </label>
+   </p>
+
+
+   <p>
+    <label class="md-filled-text-field">
+     <input required placeholder="Nombre*" name="precio">
+     <span>Precio *</span>
+     <small>Obligatorio</small>
+    </label>
+   </p>
+
+   <p>
+    <label class="md-filled-text-field">
+     <input required placeholder="Nombre*" name="descripcion">
+     <span>Descripción *</span>
+     <small>Obligatorio</small>
+    </label>
+   </p>
+
+   <center><button class="md-filled-button" type="submit">
+    Agregar
+   </button></center>
+
+
+ </form>
+
+</body>
+
+</html>

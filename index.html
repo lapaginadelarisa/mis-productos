@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de productos - Market</title>
+  <meta name="theme-color" content="#fffbfe">
+  <link rel="icon" sizes="32x32" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="ungap/custom-elements.js"></script>
+  <script type="module" src="js/configura.js"></script>
+  <script type="module" src="lib/js/consumeJson.js"></script>
+  <script type="module" src="lib/js/muestraObjeto.js"></script>
+  <script type="module" src="lib/js/muestraError.js"></script>
+
+  <!-- <link rel="stylesheet" href="css/transicion_pestanas.css">
+  <link rel="expect" blocking="render" href="#navtabfixed"> -->
+</head>
+
+<body onload="consumeJson('srv/productos.php')
+   .then(respuesta => muestraObjeto(document, respuesta.body))
+   .catch(muestraError)">
+
+
+    <md-top-app-bar>
+      <h1>Lista de productos</h1>
+    </md-top-app-bar>
+ <nav-tab-fixed id="tab"></nav-tab-fixed>
+    <main>
+
+      <ul class="md-list" id="lista">
+        <li class="md-two-line">
+            <span class="headline">Cargando&hellip;</span>
+            <span class="supporting"><progress max="100">Cargando&hellip;</progress></span>
+        </li>
+    </ul>
+      
+    </main>
+
+
+</body>
+
+</html>

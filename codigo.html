@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es" class="light dark">
+
+<head>
+
+ <meta charset="UTF-8">
+ <title>Campos de texto - PWA con MD</title>
+
+ <script src="js/registraServiceWorker.js"></script>
+
+ <meta name="viewport" content="width=device-width">
+ <meta name="theme-color" content="#fffbfe">
+ <link rel="icon" sizes="32x32" href="favicon.ico">
+ <link rel="manifest" href="site.webmanifest">
+ <script src="ungap/custom-elements.js"></script>
+
+ <script type="module" src="js/configura.js"></script>
+ <link rel="stylesheet" href="css/estilos.css">
+ <link rel="stylesheet" href="css/transicion_completa.css">
+
+</head>
+
+<body>
+
+ <md-top-app-bar headline="headline">
+
+  <h1>Texto</h1>
+
+  <button is="md-menu-button" slot="navigation"></button>
+
+ </md-top-app-bar>
+
+ <h1 id="headline">Campos de texto</h1>
+
+ <main>
+
+  <!-- Usa
+    class="float"
+   cuando quieras que la etiqueta esté arriba todo el tiempo. -->
+  <p>
+   <label class="md-filled-text-field float">
+    <output>Saludo</output>
+    <span>Saludo</span>
+   </label>
+  </p>
+
+  <p>
+   <label class="md-filled-text-field">
+    <input required placeholder="Nombre*">
+    <span>Nombre *</span>
+    <small>Obligatorio</small>
+   </label>
+  </p>
+
+  <p>
+   <label class="md-filled-text-field">
+    <input type="email" placeholder="Email">
+    <span accesskey="M">Email</span>
+   </label>
+  </p>
+
+  <p>
+   <label class="md-filled-text-field float">
+    <input type="date" placeholder="Fecha">
+    <span>Fecha</span>
+   </label>
+  </p>
+
+  <p>
+   <label class="md-filled-text-field">
+    <textarea rows="3" placeholder="Dirección"></textarea>
+    <span>Dirección</span>
+   </label>
+  </p>
+
+ </main>
+
+ <nav-drw></nav-drw>
+
+</body>
+
+</html>
