@@ -27,10 +27,7 @@
 <body>
 
   
-  <md-top-app-bar>
-    <h1>Agregar producto</h1>
-  </md-top-app-bar>
-<nav-tab-fixed id="tab"></nav-tab-fixed>
+  
   <main>
 
 
@@ -41,11 +38,27 @@
 
   
    <p>
-    <a href="index.html"><button class="md-outline-button">
-      Cancelar
-     </button></a>
+    <a class="md-standard-icon-button" rel="noreferrer" href="index.html">
+      <span class="material-symbols-outlined">arrow_back</span>
+    </a>
+
+    <button type="submit" class="md-standard-icon-button"
+    style="position: fixed; top: 1rem; right: 1rem;">
+    <span class="material-symbols-outlined">save</span>
+  </button>
+
    </p>
- 
+
+
+   
+
+
+
+
+   <md-top-app-bar>
+    <h1>Agregar producto</h1>
+  </md-top-app-bar>
+<nav-tab-fixed id="tab"></nav-tab-fixed>
 
   <p>
     <label class="md-filled-text-field">
@@ -72,9 +85,6 @@
     </label>
    </p>
 
-   <center><button class="md-filled-button" type="submit">
-    Agregar
-   </button></center>
 
 
  </form>

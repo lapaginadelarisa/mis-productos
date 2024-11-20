@@ -8,11 +8,7 @@ export class NavTabFixed extends HTMLElement {
     this.innerHTML = /* HTML */`
       <a ${resaltaSiEstasEn(["/index.html", "", "/"])} href="index.html">
         <span class="material-symbols-outlined">home</span>
-        Inicio
-      </a>
-      <a ${resaltaSiEstasEn(["/agrega.html"])} href="agrega.html">
-        <span class="material-symbols-outlined">add</span>
-        Agregar
+        Productos
       </a>
       <a ${resaltaSiEstasEn(["/ayuda.html"])} href="ayuda.html">
         <span class="material-symbols-outlined">help</span>

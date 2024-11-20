@@ -35,10 +35,7 @@
     .catch(muestraError)
   }">
 
-  <md-top-app-bar>
-    <h1>Modificar producto</h1>
-  </md-top-app-bar>
-<nav-tab-fixed id="tab"></nav-tab-fixed>
+
   <main>
 
 
@@ -47,12 +44,34 @@
     .catch(muestraError)">
 
 
-  <p>
-    <a href="index.html"><button class="md-outline-button">
-      Cancelar
-     </button></a>
-   </p>
- 
+    <p>
+      <a class="md-standard-icon-button" rel="noreferrer" href="index.html">
+        <span class="material-symbols-outlined">arrow_back</span>
+      </a>
+  
+      <button type="submit" class="md-standard-icon-button"
+      style="position: fixed; top: 1rem; right: 3rem;">
+      <span class="material-symbols-outlined">save</span>
+    </button>
+
+    <button type="button"  class="md-standard-icon-button"
+    style="position: fixed; top: 1rem; right: 1rem;" onclick="
+     if (params.size > 0 && confirm('Confirma la eliminación')) {
+      consumeJson('srv/producto-elimina.php?' + params)
+       .then(() => location.href = 'index.html')
+       .catch(muestraError)
+     }">
+     <span class="material-symbols-outlined">delete</span>
+   </button>
+
+  
+     </p>
+  
+
+     <md-top-app-bar>
+      <h1>Modificar producto</h1>
+    </md-top-app-bar>
+  <nav-tab-fixed id="tab"></nav-tab-fixed>
 
   <input name="id" type="hidden">
 
@@ -84,23 +103,6 @@
 
 
 
-   <center>
-    <p><button class="md-filled-button" type="submit">
-    Guardar
-   </button>
-    <a href="index.html">
-      <button type="button"  class="md-outline-button" onclick="
-     if (params.size > 0 && confirm('Confirma la eliminación')) {
-      consumeJson('srv/producto-elimina.php?' + params)
-       .then(() => location.href = 'index.html')
-       .catch(muestraError)
-     }">
-    Eliminar
-   </button>
-   </a>
-   </p>
-  
-  </center>
 
 
  </form>
